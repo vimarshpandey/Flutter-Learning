@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
               Card(
                 color: Colors.grey[300],
                 margin:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 child: const Padding(
                   padding: EdgeInsets.all(10),
                   child: Row(
@@ -70,7 +70,34 @@ class MyApp extends StatelessWidget {
               ),
               Card(
                 color: Colors.grey[300],
-                margin: const EdgeInsets.symmetric(horizontal: 20),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.email,
+                        size: 30,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'vimarsh240401@gmail.com',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.grey[300],
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 child: const Padding(
                   padding: EdgeInsets.all(10),
                   child: Row(
