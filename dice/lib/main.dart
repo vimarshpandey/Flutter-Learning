@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   return runApp(
-    MyApp(),
+    const MyApp(),
   );
 }
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         // body: HomePage(),
-        body: DicePage(),
+        body: const DicePage(),
       ),
     );
   }
@@ -90,8 +90,7 @@ class _DicePageState extends State<DicePage> {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextButton(
-                onPressed: ()
-                {
+                onPressed: () {
                   changeDiceNumber();
                 },
                 child: Image.asset(

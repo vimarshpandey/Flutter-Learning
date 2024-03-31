@@ -9,26 +9,44 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  Expanded changenote({required int notenum, required Color color}) {
+    return Expanded(
+      child: Container(
+        color: color,
+        child: TextButton(
+          onPressed: () {
+            final player = AudioPlayer();
+            player.play(
+              AssetSource(
+                'note$notenum.wav',
+              ),
+            );
+          },
+          child: const Text(
+            '',
+          ),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
-          child: Center(
-            child: ElevatedButton(
-              onPressed: () {
-                final player = AudioPlayer();
-                player.play(
-                  UrlSource(
-                    'https://file-examples.com/storage/fe17d655216606dd89d5226/2017/11/file_example_MP3_700KB.mp3',
-                  ),
-                );
-              },
-              child: const Text(
-                'Click Me',
-              ),
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              changenote(notenum: 1, color: Colors.red),
+              changenote(notenum: 2, color: Colors.orange),
+              changenote(notenum: 3, color: Colors.yellow),
+              changenote(notenum: 4, color: Colors.green),
+              changenote(notenum: 5, color: Colors.teal),
+              changenote(notenum: 6, color: Colors.blue),
+              changenote(notenum: 7, color: Color.fromARGB(255, 65, 3, 87))
+            ],
           ),
         ),
       ),
