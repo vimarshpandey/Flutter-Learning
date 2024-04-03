@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
               changenote(notenum: 4, color: Colors.green),
               changenote(notenum: 5, color: Colors.teal),
               changenote(notenum: 6, color: Colors.blue),
-              changenote(notenum: 7, color: Color.fromARGB(255, 65, 3, 87))
+              changenote(notenum: 7, color: const Color.fromARGB(255, 65, 3, 87))
             ],
           ),
         ),
