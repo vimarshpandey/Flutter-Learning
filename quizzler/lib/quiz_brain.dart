@@ -37,11 +37,23 @@ class QuizBrain {
     }
   }
 
+  bool isFinished() {
+    if (_questionNumber == _questionBank.length - 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   String getQuestionText() {
     return _questionBank[_questionNumber].questionText;
   }
 
   bool getCorrectAnswer() {
     return _questionBank[_questionNumber].questionAnswer;
+  }
+
+  void reset() {
+    _questionNumber = 0;
   }
 }
