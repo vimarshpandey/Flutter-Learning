@@ -21,6 +21,7 @@ class _InputpageState extends State<Inputpage> {
         centerTitle: true,
         title: const Text(
           "BMI Calculator",
+          style: TextStyle(fontFamily: 'Sedan',),
         ),
       ),
       body: SafeArea(
